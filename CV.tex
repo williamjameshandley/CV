@@ -2,14 +2,14 @@
 
 \moderncvstyle{classic}  % classic,oldstyle,banking,casual
 \moderncvcolor{blue} % orange,green,red,purple,grey,black
-\renewcommand{\familydefault}{\sfdefault} %\sfdefault,\rmdefault,<any font name>
+\renewcommand{\familydefault}{\rmdefault} %\sfdefault,\rmdefault,<any font name>
 
 \usepackage[margin=2cm]{geometry} % margins
 
 %\nopagenumbers{}
 
 \name{Will}{Handley}
-\address{Gonville \& Caius College}{CB2 1TA Cambridge}{UK}
+\address{Gonville \& Caius College}{Cambridge, UK, CB2 1TA}{}
 \phone[mobile]{+44~(0)~7718~622713}
 \phone[fixed]{+44~(0)~1223~767893}
 \email{wh260@cam.ac.uk}
@@ -17,14 +17,20 @@
 
 \newcommand{\CORE}{The CORE collaboration}
 \newcommand{\PLANCK}{The Planck collaboration}
-\newcommand{\prd}{Phys.~Rev.~D}
+\newcommand{\prd}{PRD}
 \newcommand{\mnras}{MNRAS}
 \newcommand{\aap}{A\&A}
+\newcommand{\arxiv}{arXiv}
+
+\usepackage[sort&compress,numbers]{natbib}
+\bibliographystyle{apsrev4-1}
+%\usepackage{doi}%<----------
+
 
 \begin{document}
 \makecvtitle{}
 \section{Education}
-\cventry{2012--2016}{University of Cambridge}{PhD:\@ Astrophysics}{\href{http://www.kicc.cam.ac.uk/people/anl1000}{Prof.\ A.\ Lasenby} \& \href{http://www.mrao.cam.ac.uk/people/mhobson.html}{Prof.\ M.\ Hobson}}{}{}
+\cventry{2012--2016}{University of Cambridge}{PhD:\@ Astrophysics}{\href{http://www.kicc.cam.ac.uk/directory/anl1000}{Prof.\ A.\ Lasenby} \& \href{http://www.mrao.cam.ac.uk/people/mhobson.html}{Prof.\ M.\ Hobson}}{}{}
 \cventry{2008--2012}{University of Cambridge}{MA, Msc:\@ Natural Sciences}{Gonville~\&~Caius College}{}{}
 \cventry{2001--2008}{Alleyn's School}{A levels, GCSEs}{London}{}{}
 
@@ -35,7 +41,7 @@
 \cventry{Jul-Sep 2016}{Postdoctoral position}{\href{http://zuserver2.star.ucl.ac.uk/~hiranya/}{Prof.\ H.\ Peiris}}{University College London}{}{%
     Searching for features in the primordial power spectrum.
 }
-\cventry{2012--2016}{PhD: Astrophysics}{\href{http://www.phy.cam.ac.uk/directory/lasenbya}{Prof.\ A.\ Lasenby \& \href{http://www.phy.cam.ac.uk/directory/hobsonm}{Prof.\ M.\  Hobson}}}{University of Cambridge}{}{%
+\cventry{2012--2016}{PhD: Astrophysics}{\href{http://www.kicc.cam.ac.uk/directory/anl1000}{Prof.\ A.\ Lasenby \& \href{http://www.phy.cam.ac.uk/directory/hobsonm}{Prof.\ M.\  Hobson}}}{University of Cambridge}{}{%
     \href{http://www.mrao.cam.ac.uk/~wh260/thesis/thesis.pdf}{Kinetic initial conditions for inflation: Theory, observations \& methods.}
 }
 \cventry{2011--2012}{Part III Dissertation}{\href{http://www.phy.cam.ac.uk/directory/alexanderp}{Prof.\ P.\ Alexander}}{University of Cambridge}{}{%
@@ -61,7 +67,7 @@ Geometry and field equations of granular systems.
 \cvitemwithcomment{2006--2012}{Maths and Science Tuition }{Individual coaching, key stage 1 --- STEP}
 
 \subsection{Selected Outreach}
-\cvitem{}{Over the course of my career I have given $20$ public outreach talks to astronomical societies, schools and pubs, including:}
+\cvitem{}{Over the course of my career I have given $16$ public outreach talks including:}
 
 \cventry{May 2015}{Intro.\ to Astronomy: Beyond the Milky Way}{\href{http://www.ast.cam.ac.uk/public/public_observing}{IoA Public Talk}}{Cambridge}{}{%
 }
@@ -93,38 +99,18 @@ Geometry and field equations of granular systems.
 \cventry{Dec.\ 2013}{Kinetic dominance in the pre-inflationary universe}{}{Cavendish grad.\ conference}{}{}
 
 \section{Computer skills}
-\cvitem{Programming} {(Strong) MPI parallelisation, C++, FORTRAN, Mathematica, Maple, Python}
-\cvitem{}            {(Familiar) R, MATLAB, PHP, Haskell}
-\cvitem{Computing}   {Unix, Bash, vim, git, svn, \LaTeX, Ti\textit{k}Z}
+\cvitem{Programming} {MPI parallelisation, C++, FORTRAN, Mathematica, Maple, Python}
+\cvitem{Computing}   {Unix, Bash, zsh, vim, git, svn, \LaTeX, Ti\textit{k}Z, VMs}
 \cvitem{OS}          {Linux~\&~HPC supercomputing (Experienced), Windows \& OSX (Familiar)}
 
-%\cvdoublecolumn{%
-%\cvreference{Prof.\ Anthony Lasenby}
-%{Astrophysics Group}
-%{Cavendish Laboratory}
-%{J.J. Thomson Avenue}
-%{Cambridge, UK, CB3 0HE}
-%{a.n.lasenby@mrao.cam.ac.uk}
-%{+44~(0)1223~337293/4}   
-%{www.kicc.cam.ac.uk/people/anl1000}
-%}{%
-%\cvreference{Prof.\ Mike Hobson}
-%{Astrophysics Group}
-%{Cavendish Laboratory}
-%{J.J. Thomson Avenue}
-%{Cambridge, UK, CB3 0HE}
-%{mph@mrao.cam.ac.uk}
-%{+44~(0)1223~339992}   
-%{www.phy.cam.ac.uk/directory/hobsonm}
-%}
-
-
+\setlength{\bibsep}{0pt plus 0.3ex}
 \nocite{*}
-\bibliographystyle{plain}
-\bibliography{collaboration.bib,core.bib,planck.bib,first_author.bib}
+\bibliography{first_author.bib,collaboration.bib,core.bib,planck.bib}
 
 \section{References}
-Available on request
+\href{www.kicc.cam.ac.uk/directory/anl1000}{Prof.\ Anthony Lasenby}, {+44~(0)1223~337293/4}, \href{mailto:a.n.lasenby@mrao.cam.ac.uk}{a.n.lasenby@mrao.cam.ac.uk}, 
+
+\href{www.phy.cam.ac.uk/directory/hobsonm}{Prof.\ Mike Hobson}, {+44~(0)1223~339992}, \href{mailto:mph@mrao.cam.ac.uk}{mph@mrao.cam.ac.uk} 
 
 
 
