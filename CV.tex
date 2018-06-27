@@ -3,6 +3,7 @@
 \moderncvstyle{classic}  % classic,oldstyle,banking,casual
 \moderncvcolor{blue} % orange,green,red,purple,grey,black
 \renewcommand{\familydefault}{\rmdefault} %\sfdefault,\rmdefault,<any font name>
+\usepackage[T1]{fontenc}
 
 \usepackage[margin=2cm]{geometry} % margins
 
@@ -31,7 +32,7 @@
 \makecvtitle{}
 \section{Education}
 \cventry{2012--2016}{University of Cambridge}{PhD:\@ Astrophysics}{\href{http://www.kicc.cam.ac.uk/directory/anl1000}{Prof.\ A.\ Lasenby} \& \href{http://www.mrao.cam.ac.uk/people/mhobson.html}{Prof.\ M.\ Hobson}}{}{}
-\cventry{2008--2012}{University of Cambridge}{MA, Msc:\@ Natural Sciences}{Gonville~\&~Caius College}{}{}
+\cventry{2008--2012}{University of Cambridge}{Msc, MA:\@ Natural Sciences}{Gonville~\&~Caius College}{}{}
 \cventry{2001--2008}{Alleyn's School}{A levels, GCSEs}{London}{}{}
 
 \section{Experience}
@@ -67,7 +68,7 @@ Geometry and field equations of granular systems.
 \cvitemwithcomment{2006--2012}{Maths and Science Tuition }{Individual coaching, key stage 1 --- STEP}
 
 \subsection{Selected Outreach}
-\cvitem{}{Over the course of my career I have given $16$ public outreach talks including:}
+\cvitem{}{over the course of my career i have given $16$ public outreach talks including:}
 
 \cventry{May 2015}{Intro.\ to Astronomy: Beyond the Milky Way}{\href{http://www.ast.cam.ac.uk/public/public_observing}{IoA Public Talk}}{Cambridge}{}{%
 }
@@ -87,15 +88,27 @@ Geometry and field equations of granular systems.
 \cvitemwithcomment{Summer 2010} {iGEM Studentship}                  {Wellcome Trust} 
 \cvitemwithcomment{2009--12}    {Junior and Senior Scholarships}    {Gonville~\&~Caius College} 
 
+\section{Grants won}
+\cventry{\pounds{}25,000}{STFC IAA 2016}{Interfacing PolyChord 2.0} {}{}{}
+\cventry{\pounds{}2,000}{KICC visitors 2017}{Class and MontePython workshop} {}{}{}
+\cventry{\pounds{}41,934}{STFC IAA 2018}{PolyChord and Bayesian Neural network recognition} {}{}{}
+
+\section{Supervisees}
+\cvitemwithcomment{PhD}  {Ed Higson, Lukas Hergt, Fruzsina Agocs, Will Barker}{2016-present}
+\cvitemwithcomment{Masters}  {Fruzsina Agocs, Robert Knighton, Stephen Pickman, Daniel Manela}{2016-2017}
+\cvitemwithcomment{}{Ward Haddadin, Jessica Rigley}{2017-2016}
+\cvitemwithcomment{Summer}{Elizabeth Guest, Ward Haddadin}{2018}
+
+
 \section{Academic Talks}
 
 
 \cventry{May.\ 2018}{Planck, inflation and the future of inflationary constraints}{Consistency of Cosmological Datasets}{Cambridge}{UK}{}
-\cventry{May.\ 2018}{Maximum entropy priors with derived parameters in a specified distribution}{}{Cambridge}{UK}{}
+\cventry{May.\ 2018}{MaxEnt priors with derived parameters in a specified distribution}{}{Cambridge}{UK}{}
 \cventry{May.\ 2018}{Nested Sampling: an efficient and robust Bayesian inference tool for astrophysics and cosmology}{}{ICIC}{UK}{}
 \cventry{April.\ 2018}{Introduction to statistics}{CosmoTools 18}{RWTH Aachen}{Germany}{}
 \cventry{Jan.\ 2018}{Advances in Nested Sampling \& astrophysical application}{}{Cambridge}{UK}{}
-\cventry{Aug.\ 2017}{PolyChord 2.0: Fast cosmological inference with nested sampling}{Cosmo 17}{Paris}{France}{}
+\cventry{Aug.\ 2017}{PolyChord 2.0: Fast cosmo inference \& nested sampling}{Cosmo17}{Paris}{France}{}
 \cventry{Jun.\ 2017}{Modern Bayesian Inference: Theory and Practice}{}{RWTH Aachen}{Germany}{}
 \cventry{Mar.\ 2017}{Parameter estimation and Model comparison}{CosmoTools 17}{Madrid}{Spain}{}
 \cventry{Feb.\ 2017}{PolyChord 2.0: Advances in Nested Sampling \& astrophysical application}{}{CCA}{US}{}
@@ -109,11 +122,12 @@ Geometry and field equations of granular systems.
 \section{Computer skills}
 \cvitem{Programming} {MPI parallelisation, C++, FORTRAN, Mathematica, Maple, Python}
 \cvitem{Computing}   {Unix, Bash, zsh, vim, git, svn, \LaTeX, Ti\textit{k}Z, VMs}
-\cvitem{OS}          {Linux~\&~HPC supercomputing (Experienced), Windows \& OSX (Familiar)}
+\cvitem{OS}          {Arch Linux~\&~HPC supercomputing (Experienced), Windows \& OSX (Familiar)}
 
 \setlength{\bibsep}{0pt plus 0.3ex}
 \nocite{*}
 \bibliography{first_author.bib,collaboration.bib,core.bib,planck.bib}
+
 
 \section{References}
 \href{www.kicc.cam.ac.uk/directory/anl1000}{Prof.\ Anthony Lasenby}, {+44~(0)1223~337293/4}, \href{mailto:a.n.lasenby@mrao.cam.ac.uk}{a.n.lasenby@mrao.cam.ac.uk}, 
