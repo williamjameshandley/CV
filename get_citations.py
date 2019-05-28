@@ -48,7 +48,7 @@ for key, val in bib_database.entries_dict.items():
     elif fnmatch.fnmatch(val['author'], '*{Planck Collaboration}*'):
         del val['author']# = '{{Planck Collaboration}}'
     else:
-        val['author'] = re.sub(r'{Handley},\s(.*?)\s*(and|}|$)', r'{\\textbf{Handley}}, \\textbf{\1} \2', val['author'])
+        val['author'] = re.sub(r'{Handley},\s(.*?)\s*(and|}|$)', r'{\\textbf{Handley}}, {\\textbf{\1}} \2', val['author'])
 
     try:
         if val['journal'] == 'Journal of Cosmology and Astro-Particle Physics':
