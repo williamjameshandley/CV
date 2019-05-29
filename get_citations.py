@@ -55,9 +55,14 @@ for key, val in bib_database.entries_dict.items():
             val['journal'] = r'\jcap'
         if val['journal'] == 'The Journal of Open Source Software':
             val['journal'] = r'\joss'
+        if val['journal'] == 'arXiv e-prints':
+            val['journal'] = r'arXiv'
+            val['volume'] = val['pages'][6:]
+            del val['pages']
     except KeyError:
         pass
 
 
 with open('papers.bib', 'w') as bibtex_file:
     bibtexparser.dump(bib_database, bibtex_file)
+

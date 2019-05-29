@@ -342,7 +342,7 @@ FUNCTION {format.editors}
 FUNCTION {format.title}
 { title empty$
     { "" }
-    { "\emph{" title "t" change.case$ * "}, " * }
+    { title "t" change.case$ * ",\\\ \ " * }
   if$
 }
 
@@ -715,8 +715,9 @@ FUNCTION {format.author.or.collaboration}
 FUNCTION {article}
 {
   output.bibitem
-  format.author.or.collaboration
   format.title "title" output.check
+  blank.sep
+  format.author.or.collaboration
   blank.sep
 
   crossref missing$
