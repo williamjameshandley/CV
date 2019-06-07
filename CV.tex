@@ -30,10 +30,9 @@
 
 
 \usepackage{multibib}
-\newcites{fa,st,sc,core,planck}{{First Author Publications},{Supervised Student Publications},{Collaboration Publications},{CORE Collaboration},{Planck Collaboration}}
+\newcites{fa,st,core,planck}{{First Author Publications},{Other publications},{CORE Collaboration},{Planck Collaboration}}
 \bibliographystylefa{unsrt}
 \bibliographystylest{unsrt}
-\bibliographystylesc{unsrt}
 \bibliographystyleplanck{unsrt}
 \bibliographystylecore{unsrt}
 
@@ -142,6 +141,7 @@ Geometry and field equations of granular systems.
 \section{Academic Talks}
 
 
+\cventry{Jun.\ 2019}{Likelihood free inference}{GAMBIT X}{}{Germany}{}
 \cventry{Mar.\ 2019}{Compromise-free Bayesian sparse reconstruction}{LFI workshop}{Flatiron institute}{US}{}
 \cventry{Dec.\ 2018}{Inflation, curvature and kinetic dominance}{Future uses of Planck data}{ESAC}{Spain}{}
 \cventry{Nov.\ 2018}{BAMBI Resurrection: Blind Accelerated Multimodal Bayesian Inference}{Dark Machines}{}{Worldwide}{}
@@ -234,85 +234,5 @@ Geometry and field equations of granular systems.
 \section{Publications}
 
 
-\nocitefa{PowerSpectrum}
-\nocitefa{CFLFI}
-\nocitefa{InflationReconstruction}
-
-% First author
-\nocitefa{2019arXiv190504768H}
-\nocitefa{2019arXiv190306682H}
-\nocitefa{2019arXiv190204029H}
-\nocitefa{2019arXiv190107540H}
-\nocitefa{2019Entrp..21..272H}
-\nocitefa{2018JOSS....3..849H}
-\nocitefa{2016arXiv161202288H}
-\nocitefa{2016PhRvD..94b4041H}
-\nocitefa{2015MNRAS.453.4384H}
-\nocitefa{2015MNRAS.450L..61H}
-\nocitefa{2014PhRvD..89f3505H}
-%
-%% Students
-\nocitest{2019arXiv190601421A}
-\nocitest{2018arXiv180907737H}
-\nocitest{2018arXiv180907185H}
-
-\nocitest{2019JMP....60e2504B}
-
-\nocitest{2018arXiv180911095H}
-
-\nocitest{2019MNRAS.483.4828H}
-\nocitest{2019MNRAS.483.2044H}
-\nocitest{2017arXiv170403459H}
-\nocitest{2018BayAn..13..873H}
-
-\nocitest{2017MNRAS.466..369H}
-\nocitest{2016MNRAS.455.2461H}
-%
-%% Collab
-\nocitesc{2018MNRAS.479.2968H}
-\nocitesc{2018MNRAS.478...28C}
-\nocitesc{2017NatAs...1..627Z}
-\nocitesc{2016MNRAS.460..569R}
-\nocitesc{2018arXiv181111679S}
-
-
-% CORE
-\nocitecore{2018JCAP...04..014D}
-\nocitecore{2018JCAP...04..015D}
-\nocitecore{2018JCAP...04..016F}
-\nocitecore{2018JCAP...04..017D}
-\nocitecore{2018JCAP...04..018C}
-\nocitecore{2018JCAP...04..019M}
-\nocitecore{2018JCAP...04..020D}
-\nocitecore{2018JCAP...04..021B}
-\nocitecore{2018JCAP...04..022N}
-\nocitecore{2018JCAP...04..023R}
-
-%Planck
-\nociteplanck{2018arXiv180706205P}
-\nociteplanck{2018arXiv180706206P}
-\nociteplanck{2018arXiv180706207P}
-\nociteplanck{2018arXiv180706208P}
-\nociteplanck{Likelihoods}
-\nociteplanck{2018arXiv180706209P}
-\nociteplanck{Isotropy}
-\nociteplanck{2018arXiv180706210P}
-\nociteplanck{2019arXiv190505697P}
-\nociteplanck{2018arXiv180706211P}
-\nociteplanck{2018arXiv180104945P}
-\nociteplanck{2018arXiv180706212P}
-\nociteplanck{2018A&A...617A..48P}
-\nociteplanck{2018A&A...619A..94P}
-\nociteplanck{2016A&A...594A...1P}
-\nociteplanck{2016A&A...594A..20P}
-
-
-%\setlength{\bibsep}{0pt plus 0.3ex}
-{\small
-\bibliographyfa{papers.bib}
-\bibliographyst{papers.bib}
-\bibliographysc{papers.bib}
-\bibliographycore{papers.bib}
-\bibliographyplanck{papers.bib}
-}
+\input{publications}
 \end{document}
