@@ -40,7 +40,7 @@ with open('papers_raw.bib') as bibtex_file:
     bib_database = bibtexparser.load(bibtex_file)
 
 # Parse into database
-bib_database = bibtexparser.loads(bibtex)
+#bib_database = bibtexparser.loads(bibtex)
 #val = bib_database.entries_dict['2014PhRvD..89f3505H']
 
 
@@ -57,10 +57,20 @@ for key, val in bib_database.entries_dict.items():
         val['author'] = re.sub(r'{Handley},\s(.*?)\s*(and|}|$)', r'{\\textbf{Handley}}, {\\textbf{\1}} \2', val['author'])
 
     try:
+        if val['journal'] == 'Journal of Cosmology and Astroparticle Physics':
+            val['journal'] = r'\jcap'
         if val['journal'] == 'Journal of Cosmology and Astro-Particle Physics':
             val['journal'] = r'\jcap'
+        if val['journal'] == 'Monthly Notices of the Royal Astronomical Society':
+            val['journal'] = r'\mnras'
         if val['journal'] == 'The Journal of Open Source Software':
             val['journal'] = r'\joss'
+        if val['journal'] == 'Journal of Mathematical Physics':
+            val['journal'] = r'\jmap'
+        if val['journal'] == 'Astronomy and Astrophysics':
+            val['journal'] = r'\aap'
+        if val['journal'] == 'Physical Review D':
+            val['journal'] = r'\prd'
         if val['journal'] == 'arXiv e-prints':
             val['journal'] = r'arXiv'
             val['volume'] = val['pages'][6:]
