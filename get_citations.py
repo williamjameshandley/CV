@@ -1,4 +1,3 @@
-import ads
 import bibtexparser
 import fnmatch
 import requests
