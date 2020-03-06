@@ -36,7 +36,8 @@ open("papers_raw.bib","w").write(bibtex)
 
 # Read raw if necessary
 with open('papers_raw.bib') as bibtex_file:
-    bib_database = bibtexparser.load(bibtex_file)
+    parser = bibtexparser.bparser.BibTexParser(common_strings=True)
+    bib_database = bibtexparser.load(bibtex_file,parser=parser)
 
 # Parse into database
 #bib_database = bibtexparser.loads(bibtex)
