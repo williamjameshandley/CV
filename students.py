@@ -33,6 +33,8 @@ class Student(object):
             return 'C2'
         elif self.level == 'summer':
             return 'C3'
+        if self.level == 'mphil':
+            return 'C4'
 
 students = [
         Student('Kamran Javid', '2018-10-01','2019-10-01','postdoc'),
@@ -46,13 +48,13 @@ students = [
         Student('Thomas Gessey-Jones', '2019-10-01',None,'masters'),
         Student('Aleksandr Petrosyan', '2019-10-01',None,'masters'),
         Student('Ayngaran Thavanesan', '2019-10-01',None,'masters'),
-        Student('Emma Shen', '2019-10-01',None,'masters'),
+        Student('Emma Shen', '2019-10-01',None,'mphil'),
         Student('Deaglan Bartlett', '2018-10-01','2019-07-01','masters'),
         Student('Jamie Bamber', '2018-10-01','2019-07-01','masters'),
-        Student('Ian Roque', '2018-10-01','2019-07-01','masters'),
+        Student('Ian Roque', '2018-10-01','2019-09-30','mphil'),
         Student('Ward Haddadin', '2017-10-01','2018-07-01','masters'),
         Student('Jessica Rigley', '2017-10-01','2018-07-01','masters'),
-        Student('Panagiotis Mavrogiannis', '2017-10-01','2018-07-01','masters'),
+        Student('Panagiotis Mavrogiannis', '2017-10-01','2018-09-30','mphil'),
         Student('Fruzsina Agocs', '2016-10-01','2017-07-01','masters'),
         Student('Robert Knighton', '2016-10-01','2017-07-01','masters'),
         Student('Stephen Pickman', '2016-10-01','2017-07-01','masters'),
@@ -70,13 +72,17 @@ students = sorted(students)
 import matplotlib.pyplot as plt
 fig, ax = plt.subplots()
 student = students[0]
-for i, student in enumerate(students):
+student_names = [student.name for student in students]
+unique_students = list(dict.fromkeys(student_names))
+
+for student in students:
     start = student.start.toordinal()
     if student.end is not None:
         end = student.end.toordinal() 
     else:
         end = datetime.date.today().toordinal()
         
+    i = unique_students.index(student.name)
     rect = plt.Rectangle((start, i), end-start, 1, fc=student.color, ec='k') 
     print(rect)
     ax.add_artist(rect)
