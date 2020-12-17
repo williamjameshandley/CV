@@ -3,12 +3,6 @@ import fnmatch
 import requests
 import json
 import re
-import scholarly
-
-search_query = scholarly.search_author('Will Handley')
-def citation_number(title):
-    search_query = scholarly.search_pubs_query(title + 'Handley')
-    return next(search_query).citedby
 
 # Search for my ORCID bibcodes
 token="KZS9f4psBs6gaNst2jSlX8fWI8jV9CWqnPm3E40E"
