@@ -37,21 +37,29 @@ class Student(object):
             return 'C4'
 
 students = [
+        Student('David Yallup', '2021-01-10',None,'postdoc'),
+        Student('Jianhui Lui', '2020-09-10',None,'postdoc'),
         Student('Kamran Javid', '2018-10-01','2019-10-01','postdoc'),
-        Student('Lukas Hergt', '2017-01-01',None,'phd'),
-        Student('Fruzsina Agocs', '2017-10-01',None,'phd'),
-        Student('Will Barker', '2017-10-01',None,'phd'),
-        Student('Dominic Anstey', '2018-10-01',None,'phd'),
+        Student('Yanzhi Chen', '2021-01-11',None,'phd'),
+        Student('Thomas Gessey-Jones', '2020-10-01',None,'phd'),
+        Student('George Carter', '2020-10-01',None,'phd'),
+        Student('Kilian Scheutwinkel', '2020-12-01',None,'phd'),
         Student('Harry Bevins', '2019-10-01',None,'phd'),
         Student('Ian Roque', '2019-10-01',None,'phd'),
+        Student('Dominic Anstey', '2018-10-01',None,'phd'),
+        Student('Fruzsina Agocs', '2017-10-01',None,'phd'),
+        Student('Will Barker', '2017-10-01',None,'phd'),
+        Student('Lukas Hergt', '2017-01-01','2021-01-08','phd'),
         Student('Ed Higson', '2016-10-01','2017-10-01','phd'), 
-        Student('Thomas Gessey-Jones', '2019-10-01',None,'masters'),
-        Student('Aleksandr Petrosyan', '2019-10-01',None,'masters'),
-        Student('Ayngaran Thavanesan', '2019-10-01',None,'masters'),
+        Student('Yi-Jer Loh', '2020-10-01',None,'masters'),
+        Student('Metha Prathaban', '2020-10-01',None,'masters'),
+        Student('Thomas Gessey-Jones', '2019-10-01','2020-07-01','masters'),
+        Student('Aleksandr Petrosyan', '2019-10-01','2020-07-01','masters'),
+        Student('Ayngaran Thavanesan', '2019-10-01','2020-10-01','masters'),
         Student('Emma Shen', '2019-10-01',None,'mphil'),
         Student('Deaglan Bartlett', '2018-10-01','2019-07-01','masters'),
         Student('Jamie Bamber', '2018-10-01','2019-07-01','masters'),
-        Student('Ian Roque', '2018-10-01','2019-09-30','mphil'),
+        Student('Ian Roque', '2018-10-01','2019-09-15','mphil'),
         Student('Ward Haddadin', '2017-10-01','2018-07-01','masters'),
         Student('Jessica Rigley', '2017-10-01','2018-07-01','masters'),
         Student('Panagiotis Mavrogiannis', '2017-10-01','2018-09-30','mphil'),
@@ -71,7 +79,6 @@ students = sorted(students)
 
 import matplotlib.pyplot as plt
 fig, ax = plt.subplots()
-student = students[0]
 student_names = [student.name for student in students]
 unique_students = list(dict.fromkeys(student_names))
 
@@ -88,6 +95,11 @@ for student in students:
     ax.add_artist(rect)
     ax.annotate(student.name, (start, i+0.5), va='center', ha='left')
     
+min_year = min([student.start.year for student in students])
+date_labels = [datetime.date(i,1,1) for i in range(min_year+1,datetime.date.today().year+1)]
+ax.set_xticks([d.toordinal() for d in date_labels])
+ax.set_xticklabels([d.year for d in date_labels])
+
 ax.set_xlim(min([student.start.toordinal() for student in students]), datetime.date.today().toordinal())
 ax.set_ylim(0,len(students)+1)
 
