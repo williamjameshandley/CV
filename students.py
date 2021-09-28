@@ -38,25 +38,29 @@ class Student(object):
 
 students = [
         Student('David Yallup', '2021-01-10',None,'postdoc'),
-        Student('Jianhui Lui', '2020-09-10',None,'postdoc'),
+        Student('Jianhui Lui', '2020-09-10','2021-01-31','postdoc'),
         Student('Kamran Javid', '2018-10-01','2019-10-01','postdoc'),
-        Student('Yanzhi Chen', '2021-01-11',None,'phd'),
+        Student('Kamran Javid', '2017-10-01','2018-09-30','phd'),
+        Student('Ayngaran Thavenesan', '2021-10-01',None,'phd'),
+        Student('Adam Ormondroyd', '2021-10-01',None,'phd'),
         Student('Thomas Gessey-Jones', '2020-10-01',None,'phd'),
         Student('George Carter', '2020-10-01',None,'phd'),
         Student('Kilian Scheutwinkel', '2020-12-01',None,'phd'),
         Student('Harry Bevins', '2019-10-01',None,'phd'),
         Student('Ian Roque', '2019-10-01',None,'phd'),
         Student('Dominic Anstey', '2018-10-01',None,'phd'),
-        Student('Fruzsina Agocs', '2017-10-01',None,'phd'),
-        Student('Will Barker', '2017-10-01',None,'phd'),
+        Student('Thomas Mcaloone', '2020-06-10','2021-09-30','phd'),
+        Student('Fruzsina Agocs', '2017-10-01','2021-09-01','phd'),
+        Student('Will Barker', '2017-10-01','2021-08-25','phd'),
         Student('Lukas Hergt', '2017-01-01','2021-01-08','phd'),
         Student('Ed Higson', '2016-10-01','2017-10-01','phd'), 
-        Student('Yi-Jer Loh', '2020-10-01',None,'masters'),
-        Student('Metha Prathaban', '2020-10-01',None,'masters'),
+        Student('Yi-Jer Loh', '2020-10-01','2021-07-01','masters'),
+        Student('Metha Prathaban', '2020-10-01','2021-07-01','masters'),
         Student('Thomas Gessey-Jones', '2019-10-01','2020-07-01','masters'),
         Student('Aleksandr Petrosyan', '2019-10-01','2020-07-01','masters'),
         Student('Ayngaran Thavanesan', '2019-10-01','2020-10-01','masters'),
-        Student('Emma Shen', '2019-10-01',None,'mphil'),
+        Student('Emma Shen', '2019-10-01','2020-09-30','mphil'),
+        Student('Allahyar Sahibzada', '2021-10-01',None,'mphil'),
         Student('Deaglan Bartlett', '2018-10-01','2019-07-01','masters'),
         Student('Jamie Bamber', '2018-10-01','2019-07-01','masters'),
         Student('Ian Roque', '2018-10-01','2019-09-15','mphil'),
@@ -67,6 +71,9 @@ students = [
         Student('Robert Knighton', '2016-10-01','2017-07-01','masters'),
         Student('Stephen Pickman', '2016-10-01','2017-07-01','masters'),
         Student('Daniel Manela', '2016-10-01','2017-07-01','masters'),
+        Student('Zak Shumaylov', '2021-06-21', '2021-09-30', 'summer'),
+        Student('Mattia Varrone', '2021-06-21', '2021-09-30', 'summer'),
+        Student('Maxime Jabarian', '2019-06-01', '2019-09-01', 'summer'),
         Student('Denis Werth', '2019-06-01', '2019-09-01', 'summer'),
         Student('Maxime Jabarian', '2019-06-01', '2019-09-01', 'summer'),
         Student('Liam Lau', '2019-06-01', '2019-09-01', 'summer'),
@@ -100,6 +107,6 @@ date_labels = [datetime.date(i,1,1) for i in range(min_year+1,datetime.date.toda
 ax.set_xticks([d.toordinal() for d in date_labels])
 ax.set_xticklabels([d.year for d in date_labels])
 
-ax.set_xlim(min([student.start.toordinal() for student in students]), datetime.date.today().toordinal())
+ax.set_xlim(min([student.start.toordinal() for student in students]), datetime.date.today().toordinal()+100)
 ax.set_ylim(0,len(students)+1)
 
