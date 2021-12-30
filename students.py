@@ -8,7 +8,7 @@ class Student(object):
         try:
             self.end = datetime.datetime.strptime(end,'%Y-%m-%d').date()
         except TypeError:
-            self.end = None
+            self.end = datetime.date.today()
         self.level = level
 
     def __str__(self):
@@ -22,6 +22,7 @@ class Student(object):
 
     def __lt__(self, other):
         return self.start < other.start
+        #return self.end > other.end
 
     @property
     def color(self):
@@ -46,6 +47,7 @@ students = [
         Student('Thomas Gessey-Jones', '2020-10-01',None,'phd'),
         Student('George Carter', '2020-10-01',None,'phd'),
         Student('Kilian Scheutwinkel', '2020-12-01',None,'phd'),
+        Student('Isidro Gomez Vargaz', '2020-03-16','2020-12-04','phd'),
         Student('Harry Bevins', '2019-10-01',None,'phd'),
         Student('Ian Roque', '2019-10-01',None,'phd'),
         Student('Dominic Anstey', '2018-10-01',None,'phd'),
@@ -54,11 +56,15 @@ students = [
         Student('Will Barker', '2017-10-01','2021-08-25','phd'),
         Student('Lukas Hergt', '2017-01-01','2021-01-08','phd'),
         Student('Ed Higson', '2016-10-01','2017-10-01','phd'), 
+        Student('Yoann Launay', '2021-10-01',None,'masters'),
+        Student('Oliver Normand', '2021-10-01',None,'masters'),
+        Student('Xy Wang', '2021-10-01',None,'masters'),
+        Student('Carola Zanoletti', '2021-10-01',None,'masters'),
         Student('Yi-Jer Loh', '2020-10-01','2021-07-01','masters'),
         Student('Metha Prathaban', '2020-10-01','2021-07-01','masters'),
         Student('Thomas Gessey-Jones', '2019-10-01','2020-07-01','masters'),
         Student('Aleksandr Petrosyan', '2019-10-01','2020-07-01','masters'),
-        Student('Ayngaran Thavanesan', '2019-10-01','2020-10-01','masters'),
+        Student('Ayngaran Thavenesan', '2019-10-01','2020-10-01','masters'),
         Student('Emma Shen', '2019-10-01','2020-09-30','mphil'),
         Student('Allahyar Sahibzada', '2021-10-01',None,'mphil'),
         Student('Deaglan Bartlett', '2018-10-01','2019-07-01','masters'),
