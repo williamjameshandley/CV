@@ -60,7 +60,7 @@ students = [
         Student('Oliver Normand', '2021-10-01','2022-06-01','masters','ocn22@cam.ac.uk'),
         Student('Xy Wang', '2021-10-01','2022-06-01','masters','yw491@cam.ac.uk'),
         Student('Carola Zanoletti', '2021-10-01','2022-06-01','masters','cmz22@cam.ac.uk'),
-        Student('Yi-Jer Loh', '2020-10-01','2021-06-01','masters','loh.yijer@live.com'),
+        Student('Yi Jer Loh', '2020-10-01','2021-06-01','masters','loh.yijer@live.com'),
         Student('Metha Prathaban', '2020-10-01','2021-06-01','masters','mrosep_10@hotmail.co.uk'),
         Student('Thomas Gessey-Jones', '2019-10-01','2020-06-01','masters','tg400@cam.ac.uk'),
         Student('Aleksandr Petrosyan', '2019-10-01','2020-06-01','masters','appetrosyan@icloud.com'),
