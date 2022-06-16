@@ -47,7 +47,7 @@ students = [
         Student('Thomas Gessey-Jones', '2020-10-01',None,'phd','tg400@cam.ac.uk'),
         Student('George Carter', '2020-10-01',None,'phd','gtc30@cam.ac.uk'),
         Student('Kilian Scheutwinkel', '2020-12-01',None,'phd','khs40@cam.ac.uk'),
-        Student('Isidro Gomez Vargaz', '2020-03-16','2020-12-04','phd','igomez@icf.unam.mx'),
+        Student('Isidro Gomez Vargas', '2020-03-16','2020-12-04','phd','igomez@icf.unam.mx'),
         Student('Harry Bevins', '2019-10-01',None,'phd','htjb2@cam.ac.uk'),
         Student('Ian Roque', '2019-10-01',None,'phd','ilvr2@cam.ac.uk'),
         Student('Dominic Anstey', '2018-10-01',None,'phd','da401@cam.ac.uk'),
