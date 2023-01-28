@@ -5,7 +5,7 @@ import json
 import re
 
 # Search for my ORCID bibcodes
-token="KZS9f4psBs6gaNst2jSlX8fWI8jV9CWqnPm3E40E"
+token="6FwxhZjb0VZ0oNQEA0iUUmK4ExyzXB7nWIAb1CRJ"
 orcid="0000-0002-5866-0445"
 r = requests.get("https://api.adsabs.harvard.edu/v1/search/query",
                  headers={'Authorization': 'Bearer ' + token},
