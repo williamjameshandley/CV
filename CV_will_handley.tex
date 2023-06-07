@@ -6,6 +6,11 @@
 \usepackage[T1]{fontenc}
 
 \usepackage[margin=2cm]{geometry} % margins
+\usepackage{totcount}
+
+\newtotcounter{citnum} %From the package documentation
+\def\oldbibitem{} \let\oldbibitem=\bibitem
+\def\bibitem{\stepcounter{citnum}\oldbibitem}
 
 %\nopagenumbers{}
 
@@ -82,7 +87,7 @@ Nested sampling; Bayesian machine learning; cosmological model selection, parame
     \item Interdisciplinary research with technology transfer to industry, government \& start-ups.
     \item 2 years experience lecturing fourth year Cambridge General Relativity \& Bayesian inference courses. 
     \item 6 years experience (co-)supervising 17 PhD students \& 3 postdocs.
-    \item 117 papers, (3 NatAstro and 1 PRL within last year)
+    \item \total{citnum} papers, (3 NatAstro and 1 PRL within last year)
     \item PhD begun in 2012
 \end{itemize}
 
