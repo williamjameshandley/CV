@@ -34,11 +34,12 @@
 
 
 \usepackage{multibib}
-\newcites{fa,st,core,planck}{{First Author Publications},{Other publications},{CORE Collaboration},{Planck Collaboration}}
-\bibliographystylefa{unsrt}
-\bibliographystylest{unsrt}
-\bibliographystyleplanck{unsrt}
-\bibliographystylecore{unsrt}
+%\newcites{fa,st,core,planck}{{First Author Publications},{Other publications},{CORE Collaboration},{Planck Collaboration}}
+\newcites{st,core,planck}{{},{CORE Collaboration},{Planck Collaboration}}
+%\bibliographystylefa{unsrt}
+\bibliographystylest{plainyr-rev}
+\bibliographystyleplanck{plainyr-rev}
+\bibliographystylecore{plainyr-rev}
 
 \makeatletter
 \renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
@@ -68,6 +69,7 @@
   \strut\subsectionstyle{#2}%
   \par\nobreak\addvspace{.5ex}\@afterheading}% to avoid a pagebreak after the heading
 \makeatother
+
 
 
 \begin{document}
@@ -150,7 +152,6 @@ Geometry and field equations of granular systems.
 \cvitemwithcomment{Jul.\ 2022}  {Pacific Institute of Theoretical Physics visitor}         {University of British Columbia}
 \cvitemwithcomment{Feb.\ 2020}  {George Southgate visiting Fellow}         {University of Adelaide}
 \cvitemwithcomment{Jul.\ 2019}  {Guiseppe and Vanna Cocconi Prize (WMAP and Planck)}         {EPS-HEPP Division}
-\cvitemwithcomment{Jun.\ 2018}  {Gruber Prize (Planck)}{Gruber Foundation}
 \cvitemwithcomment{Dec.\ 2013}  {Best presentation}                 {Cavendish grad.\ students conference}
 \cvitemwithcomment{Jun.\ 2012}  {Best theoretical part III project} {University of Cambridge} 
 \cvitemwithcomment{}            {Physics prize}                     {Gonville~\&~Caius College} 
@@ -378,7 +379,7 @@ Review for fellowship awards:
 \input{publications}
 %\setlength{\bibsep}{0pt plus 0.3ex}
 {\small
-\bibliographyfa{papers.bib}
+%\bibliographyfa{papers.bib}
 \bibliographyst{papers.bib}
 \bibliographycore{papers.bib}
 \bibliographyplanck{papers.bib}
